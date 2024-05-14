@@ -18,6 +18,7 @@ class CreateOrderUseCase {
       id: uuidv4(),
       order_title,
       order_description,
+      status: "pending",
     };
 
     await this.orderRepository.create(newOrder);

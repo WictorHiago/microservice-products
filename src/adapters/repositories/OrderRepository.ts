@@ -7,8 +7,8 @@ class OrderRepository implements IOrderRepository {
     const client = await pool.connect();
     try {
       const result = await client.query(
-        "INSERT INTO orders (id,order_title, order_description) VALUES ($1, $2, $3) RETURNING *",
-        [order.id, order.order_title, order.order_description]
+        "INSERT INTO orders (id,order_title, order_description, status) VALUES ($1, $2, $3, $4) RETURNING *",
+        [order.id, order.order_title, order.order_description, order.status]
       );
       return result.rows[0];
     } catch (error) {
