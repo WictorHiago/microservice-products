@@ -4,8 +4,10 @@
 
 ### Postgres version 14
 
-- Official Doc: https://www.rabbitmq.com/tutorials
-- Docker image: https://hub.docker.com/_/rabbitmq
+> > > Docs
+
+- Official Doc RabbitMQ: https://www.rabbitmq.com/tutorials
+- Docker image RabbitMQ: https://hub.docker.com/_/rabbitmq
 
 * Nodemailer: https://www.nodemailer.com/about/
 * Mailtrap: https://github.com/railsware/mailtrap-nodejs
@@ -30,6 +32,7 @@
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
     "@types/morgan": "^1.9.9",
+    "@types/amqplib": "^0.10.5",
 ```
 
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
@@ -56,6 +59,12 @@ npm install
 npm run dev
 or
 yarn dev
+```
+
+### Configure tsconfig.json
+
+```
+"strictPropertyInitialization": false
 ```
 
 ### RUN RabbitMQ on Docker:
